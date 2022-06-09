@@ -6,9 +6,9 @@ package main
 
 func Pic(dx, dy int) [][]uint8 {
 	image := make([][]uint8, dy)
-	for index:= 0; index < dy; index ++ {
+	for index := 0; index < dy; index++ {
 		image[index] = make([]uint8, dx)
-		for inner_index:= 0; inner_index < dx; inner_index ++ {
+		for inner_index := 0; inner_index < dx; inner_index++ {
 			image[index][inner_index] = uint8(inner_index * index)
 		}
 	}
@@ -19,4 +19,3 @@ func Pic(dx, dy int) [][]uint8 {
 func main() {
 	// pic.Show(Pic)
 }
-

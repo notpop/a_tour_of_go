@@ -33,12 +33,12 @@ func main() {
 	count := 0
 	var mu sync.Mutex
 	wg := sync.WaitGroup{}
-	for i := 0; i < 100000; i ++ {
+	for i := 0; i < 100000; i++ {
 		wg.Add(1)
 		go func() {
 			mu.Lock()
 			defer mu.Unlock()
-			count ++
+			count++
 			fmt.Print("*")
 			// mu.Unlock()
 			wg.Done()
